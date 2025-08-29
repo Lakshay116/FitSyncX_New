@@ -23,6 +23,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api', userRouter);
 app.use('/', webRouter);
+app.get('/', (req, res) => {
+    res.send({
+        activeStatus: true,
+        error: false,
+    })
+}
+)
 
 require('./config/db')
 
@@ -116,3 +123,4 @@ app.listen(8000, () => {
     console.log("My Server");
 
 })
+
