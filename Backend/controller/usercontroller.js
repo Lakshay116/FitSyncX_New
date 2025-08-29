@@ -179,11 +179,11 @@ const admin_login = (req, res) => {
                         })
                     }
                     if (bresult) {
-                        const token = jwt.sign({ email: result[0]['email'] }, process.env.JWT_SECRET, { expiresIn: '1h' });
+                        //const token = jwt.sign({ email: result[0]['email'] }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
                         return res.status(200).send({
                             msg: "Logged In",
-                            token,
+                            //token,
                             user: result[0]
                         })
                     }
@@ -328,3 +328,4 @@ module.exports = {
     markAttendance,
     contactSubmit
 }
+
