@@ -1,0 +1,91 @@
+.features_div {
+    width: 100vw;
+    height: 331vh;
+    background-color: black;
+}
+
+.featur_h1 {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    /* color: rgb(122, 121, 121); */
+    background-image: radial-gradient(rgb(53, 52, 52), rgb(12, 10, 8), rgb(6, 6, 7));
+    /* font-family: "Dancing Script", cursive; */
+    font-size: 4rem;
+    text-decoration: underline;
+    text-shadow: 2px 2px #f1f1f1;
+}
+
+
+
+.card1 {
+    /* align-items: center; */
+    /* background-color: antiquewhite; */
+    /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%); */
+    display: grid;
+    margin-left: 10vw;
+    width: 20vw;
+    height: 60vh;
+}
+
+.card2 {
+    /* align-items: center; */
+    display: grid;
+    margin-left: 10vw;
+    width: 20vw;
+    height: 60vh;
+}
+
+.card3 {
+    /* align-items: center; */
+    display: grid;
+    margin-left: 10vw;
+    width: 20vw;
+    height: 60vh;
+}
+
+.card4 {
+    /* align-items: center; */
+    display: grid;
+    margin-left: 10vw;
+    margin-top: 10vw;
+    width: 20vw;
+    height: 60vh;
+}
+
+.card5 {
+    /* align-items: center; */
+    display: grid;
+    margin-left: 10vw;
+    margin-top: 10vw;
+    width: 20vw;
+    height: 60;
+}
+
+.card_div {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction:; */
+}
+
+
+.feature_last {
+    height: 30vh;
+    width: 70vw;
+    margin-left: 15vw;
+    /* background-color: aliceblue; */
+    margin-top: 20vh;
+    display: flex;
+}
+
+.easy {
+    width: 50%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.easy_img {
+    margin-left: 5vh;
+    width: 40%;
+
+}

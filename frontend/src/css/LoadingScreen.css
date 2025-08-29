@@ -1,0 +1,74 @@
+/* Container */
+.loading-dumbbell-container {
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+    color: #222;
+}
+
+/* Top loading bar */
+.loading-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background-color: red;
+    animation: growBar 1s ease-in-out forwards;
+}
+
+@keyframes growBar {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* Dumbbell Spinner */
+.dumbbell-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin .8s linear infinite;
+    margin-bottom: 20px;
+    transform-origin: center;
+}
+
+.plate {
+    width: 20px;
+    height: 50px;
+    background-color: #444;
+    border-radius: 4px;
+}
+
+.handle {
+    width: 100px;
+    height: 10px;
+    background-color: orangered;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading text */
+.loading-text {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}

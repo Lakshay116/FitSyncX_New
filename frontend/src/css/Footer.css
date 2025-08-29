@@ -1,0 +1,32 @@
+.footer_div {
+    display: flex;
+    width: 100vw;
+    height: 73vh;
+    background-color: rgb(8, 8, 8);
+}
+
+.ftr_logo_div {
+    width: 30vw;
+    /* background-color: rgb(158, 202, 241); */
+}
+
+.footer_logo {
+    background-color: rgb(151, 202, 247);
+    border-radius: 20px;
+    margin-top: 15vh;
+    margin-left: 7vw;
+    width: 20vw;
+}
+
+.contact_us {
+    text-align: center;
+    margin-left: 3vw;
+    margin-top: 13vh;
+    width: 30vw;
+    height: 60vh;
+    /* background-color: antiquewhite; */
+}
+
+.head {
+    color: white;
+}

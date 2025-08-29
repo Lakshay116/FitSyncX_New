@@ -1,0 +1,241 @@
+body {
+    /* background-image: url(../images/abt_bg.jpg); */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: rgb(3, 3, 3); */
+    background-image: url(../images/main_bg.jpg);
+    background-size: cover;
+}
+
+.BodyB {
+    margin-top: 17vh;
+    height: 83vh;
+    width: 45vw;
+    float: right;
+
+}
+
+.mainText {
+    margin-left: 6vw;
+    height: 80vh;
+    width: 48vw;
+    /* background-color: aqua; */
+    float: left;
+    margin-top: 20vh;
+}
+
+.toptext {
+    /* text-shadow: 2px 2px 0px  #fcf9f9, -2px -2px 0px  #f7f6f6, 2px -2px 0px  #f5f5f5, -2px 2px 0px  #f8f4f4; */
+    color: rgb(245, 242, 242);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2rem;
+}
+
+h3,
+.shape {
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 0px #fcf9f9, -2px -2px 0px #f7f6f6, 2px -2px 0px #f5f5f5, -2px 2px 0px #f8f4f4;
+    color: rgb(14, 13, 13);
+    font-family: 'Arial';
+}
+
+.ft {
+    margin: 0;
+    padding: 0;
+    /* text-shadow: 2px 2px 0px #f5f1f1, -2px -2px 0px #f1efef, 2px -2px 0px #f4f7f5, -2px 2px 0px #fdfcfc; */
+    color: orangered;
+    text-shadow: 3px 3px #ff0202;
+    font-family: 'Arial';
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.ft {
+    /* font-family: sans-serif; */
+    /* font-weight: 800; */
+    /* text-align: center; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* min-height: 100vh; */
+}
+
+.abt_div {
+    width: 100vw;
+    height: 120vh;
+    /* background-color: aqua; */
+    /* background-image: url(../images/abt_bg.jpg); */
+    background-color: black;
+    /* background-image: radial-gradient(rgb(53, 52, 52), rgb(12, 10, 8), rgb(6, 6, 7)); */
+    background-size: cover;
+    background-position: right;
+    display: block;
+}
+
+.about {
+    width: 55vw;
+    height: 70vh;
+    /* background-color: rgba(13, 4, 22, 0.7); */
+    background-image: radial-gradient(rgb(53, 52, 52), rgb(12, 10, 8), rgb(6, 6, 7));
+    text-align: center;
+    margin: 10vh 0 0 4vw;
+    border-radius: 50px;
+    border: 2px solid orangered;
+    float: left;
+    transition: box-shadow .7s;
+}
+
+.about:hover {
+    box-shadow: 16px 12px 16px 0 rgba(255, 69, 0, 0.24), 0 17px 20px 0 rgba(250, 250, 250, 0.19);
+}
+
+.abt_img {
+    margin-left: 90vh;
+    margin-top: 20vh;
+    /* width: 40vw;
+    height: 0vh; */
+    /* background-color: #f5f1f1; */
+}
+
+.bb_img {
+    width: 60vh;
+    height: 60vh;
+    margin-left: 5vw;
+    /* background-color: #f1efef; */
+}
+
+.abt_h1 {
+    padding-top: 5vh;
+    color: orangered;
+    font-size: 2.5rem;
+    /* font-family: cursive; */
+}
+
+.abt_p {
+    color: #f1efef;
+    text-align: justify;
+    padding: 7vh;
+    font-size: 1.4rem;
+    /* font-family: cursive; */
+}
+
+.contact_div {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/contact.mp4);
+    background-size: cover;
+    /* background-color: black; */
+}
+
+.videoTag {
+    z-index: -1;
+    /* height: 100%;
+    width: 100%; */
+    float: left;
+    top: 0;
+    padding: none;
+    position: fixed;
+    /* optional depending on what you want to do in your app */
+
+
+}
+
+.contact_form {
+    width: 50vw;
+    height: 80vh;
+    margin-left: 45vw;
+    /* margin-top: 10vh; */
+
+}
+
+.contact_input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid orangered;
+
+    color: rgb(226, 223, 223);
+    font-size: 1rem;
+    margin: .5vh;
+    /* margin-top: 25vh; */
+    width: 22vw;
+    height: 7vh;
+    border-radius: 10px;
+}
+
+.contact_text {
+    /* background-color: transparent; */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid orangered;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    margin-left: .5vw;
+    margin-top: 3vh;
+    width: 45vw;
+    height: 20vh;
+    border-radius: 10px;
+}
+
+.submit-contact {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    font-size: 1.5rem;
+    /* font-family: 'Courier New', Courier, monospace; */
+    margin-top: 5vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: .5vw;
+    height: 8vh;
+    width: 15vw;
+    border-radius: 5px;
+    transition: color .5s;
+    transition: background-color .3s;
+    border: 2px solid orangered;
+}
+
+.submit-contact:hover {
+    background-color: orangered;
+    color: rgb(7, 6, 6);
+    /* border: 2px solid rgb(12, 11, 11); */
+    transform: scaleX(1);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 27px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact_h1 {
+    /* float: left; */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-top: 19vh;
+    margin-left: 2vw;
+    float: left;
+    width: 40vw;
+    height: 80vh;
+    display: inline-flex;
+    /* background-color: #070a08; */
+    color: white;
+}
+
+.h1_cnt {
+    /* background-color: #0a0707; */
+    padding-top: 20vh;
+    padding-bottom: 3vh;
+    margin-bottom: 0;
+    margin-left: .5vw;
+    font-weight: bold;
+    font-size: 2rem;
+    color: orangered;
+}
+
+.cnt_img {
+    margin-top: 5vh;
+    margin-left: 6vw;
+    height: 60vh;
+    /* background-color: #f1efef; */
+}

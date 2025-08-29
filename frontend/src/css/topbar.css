@@ -1,0 +1,47 @@
+.topbar {
+    width: 83.2vw;
+    margin: 5px;
+    margin-left: 212px;
+    border-radius: 10px;
+    height: 50px;
+    background-color: orangered;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top_h1 {
+    color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+    margin-top: .8%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.topbar_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    /* background-color: aqua; */
+    height: 50px;
+}
+
+.logout {
+    color: antiquewhite;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 50%;
+    height: 60%;
+    text-align: center;
+    background-color: transparent;
+    font-weight: bold;
+    transition: background-color .3s;
+}
+
+.logout:hover {
+    cursor: pointer;
+    background-color: white;
+    color: orangered;
+}

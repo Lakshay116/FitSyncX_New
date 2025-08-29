@@ -1,0 +1,90 @@
+.pricing_div {
+    height: 150vh;
+    width: 100vw;
+    /* background-color: rgb(3, 3, 3); */
+}
+
+.h1_price {
+    color: white;
+    padding: 20vh 0 0 30vh;
+    font-size: 2rem;
+}
+
+.head_prc {
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+    /* background-color: antiquewhite; */
+}
+
+.in_head_prc {
+    display: flex;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid rgb(250, 249, 249);
+    margin-top: 4vh;
+    width: 20vw;
+    margin-left: 4vw;
+    height: 15vh;
+    /* background-color: aqua; */
+}
+
+.content_prc {
+    display: flex;
+    width: 100vw;
+    height: 60vh;
+    /* background-color: antiquewhite; */
+}
+
+.in_content_prc {
+    border-radius: 5px;
+    border: 1px solid rgb(243, 242, 242);
+    width: 20vw;
+    margin-left: 4vw;
+    height: 50vh;
+    /* background-color: aqua; */
+}
+
+.prc {
+    margin-top: 25%;
+    text-align: center;
+    font-size: 1.7rem;
+    color: rgb(88, 87, 87);
+}
+
+.price {
+    color: orangered;
+}
+
+.free_btn {
+    width: 80%;
+    height: 13%;
+    margin-left: 10%;
+    border-radius: 5px;
+    background: orangered;
+    border: 2px solid orangered;
+    transition: border .5s;
+    font-size: 1rem;
+}
+
+.free_btn:hover {
+    border: 2px solid black;
+}
+
+.book_btn {
+    width: 80%;
+    height: 13%;
+    margin-left: 10%;
+    margin-top: 10%;
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid orangered;
+    color: orangered;
+    transition: background-color .5s;
+    font-size: 1rem;
+}
+
+.book_btn:hover {
+    background-color: orangered;
+    color: white;
+}

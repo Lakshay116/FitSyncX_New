@@ -1,0 +1,386 @@
+.card_main {
+    text-align: center;
+    margin-left: 3.6%;
+    margin-top: 3%;
+    width: 20%;
+    border: 2px solid black;
+    height: 15vh;
+    border-radius: 10px;
+    transition: background-color .2s;
+}
+
+.card_main:hover {
+    background-color: rgb(227, 255, 251);
+    cursor: pointer;
+}
+
+.card {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.piechart_div {
+    width: 40%;
+    margin: 5% 0 0 3.5%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.piechart {
+    margin: 9% 0 5% 0;
+}
+
+.add-member-div {
+    width: 50%;
+    height: 70%;
+    background-color: aqua;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+} */
+
+.form-container {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+}
+
+
+.form-box {
+    color: black;
+    /* background-color: black; */
+    width: 100vh;
+    padding: 30px 40px;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(22, 16, 16, 0.1); */
+    /* width: 300px; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 10px;
+
+}
+
+input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button1 {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s;
+    transition: border .3s;
+    border: 2px solid orangered;
+}
+
+.button1:hover {
+    background-color: #0f0a06;
+    border: 2px solid white;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.toggle-btn {
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #070808;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.toggle-btn:hover {
+    background-color: #2b6969;
+}
+
+
+
+
+
+
+
+
+.table-container {
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #030303;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.search-input {
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+
+
+
+
+
+
+
+/* addtrainer */
+
+
+
+
+
+.trainer-form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    /* background-color: #f8f9fa; */
+    border-radius: 12px;
+    /* box-shadow: 0 0 10px rgba(0, 123, 255, 0.1); */
+}
+
+.trainer-form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #007bff;
+}
+
+.trainer-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.trainer-form-container input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.trainer-form-container button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.trainer-form-container button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.trainer-list-container {
+    height: 70vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.trainer-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.trainer-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.trainer-card:hover {
+    transform: translateY(-5px);
+}
+
+.trainer-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.trainer-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.trainer-info h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+.trainer-list-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.trainer-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.trainer-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.trainer-card:hover {
+    transform: translateY(-5px);
+}
+
+.trainer-image {
+    width: 70%;
+    /* height: 180px; */
+    margin-top: 5px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.trainer-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.trainer-info h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.delete-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    background-color: #b02a37;
+}
+
+.pagination {
+    margin-top: 30px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 8px 14px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

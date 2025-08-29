@@ -1,0 +1,82 @@
+.sidebar_main {
+    width: 200px;
+    height: 98vh;
+    background-color: rgb(2, 2, 2);
+    position: relative;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.sideList {
+    color: orangered;
+    list-style: none;
+    padding: 0;
+    height: auto;
+    width: 100%;
+}
+
+.row {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    /* border: 1px solid black; */
+    /* list-style-type: none; */
+    text-decoration: none;
+    height: 60px;
+}
+
+.row:hover {
+    /* background-color: rgba(48, 13, 8, 0.5); */
+    cursor: pointer;
+}
+
+
+#icon {
+    flex: 35%;
+    margin-right: 6%;
+    justify-content: right;
+    display: grid;
+    place-items: center;
+}
+
+#title {
+    text-align: left;
+    flex: 75%;
+}
+
+.side_h1 {
+    padding-top: 10px;
+    text-align: center;
+    color: orangered;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sidebar_header {
+    /* column-width: '50%'; */
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    /* background-color: blue; */
+}
+
+.topbar {
+    background-color: #2f4f7f;
+    height: 20px;
+}
+
+.selected-button {
+    background-color: orangered;
+    color: black;
+    /* background: none; */
+}
+
+.button {
+    background: transparent;
+    color: orangered;
+}
