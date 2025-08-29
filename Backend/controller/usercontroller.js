@@ -7,7 +7,7 @@ const randomstring = require('randomstring');
 const sendMail = require('../helper/sendMaill');
 
 
-const contactSubmit = (req, res) => {
+const contactSubmit = async (req, res) => {
     const name = req.body.name;
     const mailSubject = '@no_reply_mail';
     const email = req.body.email;
@@ -15,8 +15,8 @@ const contactSubmit = (req, res) => {
     const content = `<h1>Thanks,<br> ${name} <br>for contacting us, we will get back to you as soon as possible.</h1>`;
 
     if (name.length !== 0 && email.length !== 0) {
-        sendMail(email, mailSubject, content);
-        sendMail('jangralakshay611@gmail.com', 'A person contacted us on FitSyncX.', `<h1>Email:<br> ${email}<br>Text:<br> ${text} </h1>`);
+        await sendMail(email, mailSubject, content);
+        await sendMail('jangralakshay611@gmail.com', 'A person contacted us on FitSyncX.', `<h1>Email:<br> ${email}<br>Text:<br> ${text} </h1>`);
 
         return res.status(200).json({
             success: true,
@@ -328,4 +328,5 @@ module.exports = {
     markAttendance,
     contactSubmit
 }
+
 
