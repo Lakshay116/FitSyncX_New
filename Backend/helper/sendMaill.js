@@ -22,7 +22,7 @@ const sendMail = async (email, mailSubject, content) => {
             subject: mailSubject,
             html: content
         }
-        transport.sendMail(mailOptions, function (error, info) {
+        await transport.sendMail(mailOptions, function (error, info) {
             if (error) {
                 console.log(error);
             } else {
@@ -36,4 +36,5 @@ const sendMail = async (email, mailSubject, content) => {
 
 
 module.exports = sendMail;
+
 
