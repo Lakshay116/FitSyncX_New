@@ -17,13 +17,6 @@ app.use(cors(
     }
 ));
 
-app.get('/', (req, res) => {
-    res.send({
-        activeStatus: true,
-        error: false,
-    })
-}
-)
 app.use('/uploads', express.static('uploads'));
 
 app.use(express.json());
@@ -125,5 +118,6 @@ app.listen(8000, () => {
     console.log("My Server");
 
 })
+
 
 
