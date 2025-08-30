@@ -92,7 +92,7 @@ const register = async (req, res) => {
                 });
             }
             else {
-                bcrypt.hash(req.body.password, 10, (err, hash) => {
+                bcrypt.hash(req.body.password, 10, async (err, hash) => {
                     if (err) {
                         return res.status(400).send({
                             msg: err
@@ -101,7 +101,7 @@ const register = async (req, res) => {
                     else {
                         db.query(`INSERT INTO users(NAME,EMAIL,PHONE,PASSWORD) 
                             VALUES('${req.body.name.toUpperCase()}',UPPER(${db.escape(req.body.email)}),${db.escape(req.body.phone)},${db.escape(hash)});`,
-                            (err, result) => {
+                            async (err, result) => {
                                 if (err) {
                                     return res.status(500).send({
                                         msg: err
@@ -114,30 +114,30 @@ const register = async (req, res) => {
 
 
                                 try {
-        var transport = await nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: "lakshay.jangra.394@gmail.com",
-                pass: 'cfaprmptfpvzdffd'
-            }
-        });
+                                    var transport = await nodemailer.createTransport({
+                                    service: 'gmail',
+                                    auth: {
+                                        user: "lakshay.jangra.394@gmail.com",
+                                        pass: 'cfaprmptfpvzdffd'
+                                    }
+                                    });
 
-        const mailOptions = {
-            from: "lakshay.jangra.394@gmail.com",
-            to: req.body.mail,
-            subject: mailSubject,
-            html: content
-        }
-        await transport.sendMail(mailOptions, function (error, info) {
-            if (error) {
-                console.log(error);
-            } else {
-                console.log("mail Sent Succesfully", info.response);
-            }
-        })
-    } catch (error) {
-        console.log(error.message);
-    }
+                                    const mailOptions = {
+                                        from: "lakshay.jangra.394@gmail.com",
+                                        to: req.body.mail,
+                                        subject: mailSubject,
+                                        html: content
+                                    }
+                                    await transport.sendMail(mailOptions, function (error, info) {
+                                    if (error) {
+                                        console.log(error);
+                                    } else {
+                                        console.log("mail Sent Succesfully", info.response);
+                                    }
+                                    })
+                                    } catch (error) {
+                                        console.log(error.message);
+                                    }
                                 
                                 
                                 
@@ -159,9 +159,9 @@ const register = async (req, res) => {
         })
 }
 
-const verifyMail = (req, res) => {
+const verifyMail = async (req, res) => {
     var token = req.query.token;
-    db.query('SELECT * FROM users WHERE TOKEN=? LIMIT 1', token, function (error, result, fields) {
+    await db.query('SELECT * FROM users WHERE TOKEN=? LIMIT 1', token, function (error, result, fields) {
         if (error) {
             console.log(error.message);
         }
@@ -402,6 +402,7 @@ module.exports = {
     markAttendance,
     contactSubmit
 }
+
 
 
 
