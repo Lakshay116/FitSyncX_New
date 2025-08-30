@@ -30,8 +30,8 @@ function About() {
     }
 
 
-    const signup = async () => {
-        await fetch(`${process.env.REACT_APP_BE_URL}/api/register`, {
+    const signup = () => {
+        fetch(`${process.env.REACT_APP_BE_URL}/api/register`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -77,6 +77,7 @@ function About() {
         </div>
     )
 }
+
 
 
 export default About   
