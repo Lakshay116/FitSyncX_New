@@ -48,7 +48,7 @@ const contactSubmit = async (req, res) => {
                     console.log("mail Sent Succesfully", info.response);
                 }
             })
-            await ransport.sendMail(mailOptions2, function (error, info) {
+            await transport.sendMail(mailOptions2, function (error, info) {
                 if (error) {
                     console.log(error);
                 } else {
@@ -76,7 +76,7 @@ const contactSubmit = async (req, res) => {
 
 
 
-const register = (req, res) => {
+const register = async (req, res) => {
     const error = validationResult(req);
 
     if (!error.isEmpty()) {
@@ -128,7 +128,7 @@ const register = (req, res) => {
             subject: mailSubject,
             html: content
         }
-        transport.sendMail(mailOptions, function (error, info) {
+        await transport.sendMail(mailOptions, function (error, info) {
             if (error) {
                 console.log(error);
             } else {
@@ -402,6 +402,7 @@ module.exports = {
     markAttendance,
     contactSubmit
 }
+
 
 
 
