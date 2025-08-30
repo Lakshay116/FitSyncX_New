@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../css/Dashboard.css';
 import Loading from '../components/Loading'
+
+
 function AddMember() {
     const [formData, setFormData] = useState({
         firstName: '',
@@ -27,7 +29,7 @@ function AddMember() {
         e.preventDefault();
         console.log(formData);
         try {
-            const response = await fetch('http://localhost:5001/api/users', {
+            const response = await fetch(`${process.env.REACT_APP_BE_URL}/api/users`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

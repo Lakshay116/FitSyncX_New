@@ -10,7 +10,7 @@ export class Navbar extends Component {
     render() {
         return (
             <div><nav className="navbar">
-                <Link to="/"><img src={Logo} className='logo'></img></Link>
+                <Link to="/"><img src={Logo} className='logo' alt=""></img></Link>
                 <ul className='nav_ul'>
                     <li className='nav_li'><Link to="/" className='nav_link'>Home</Link></li>
                     {/* <li className='nav_li'><Link to="/about" className='nav_link'>About</Link></li> */}

@@ -29,7 +29,7 @@ const AddTrainer = () => {
         });
 
         try {
-            const res = await fetch('http://localhost:5001/api/trainers', {
+            const res = await fetch(`${process.env.REACT_APP_BE_URL}/api/trainers`, {
                 method: 'POST',
                 body: formData,
             });

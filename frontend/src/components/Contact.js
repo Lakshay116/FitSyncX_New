@@ -13,7 +13,7 @@ function Contact() {
     const textChangeHandler = (e) => setText(e.target.value);
 
     const contactUs = async () => {
-        await fetch(`http://localhost:5001/api/contact`, {
+        await fetch(`${process.env.REACT_APP_BE_URL}/api/contact`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

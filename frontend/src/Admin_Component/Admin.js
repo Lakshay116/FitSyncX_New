@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 import Sidebar from '../After_Login/user_sidebar'
 import Topbar from '../After_Login/Topbar'
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
 import CardMembershipIcon from '@mui/icons-material/CardMembership';
 import RecentActorsIcon from '@mui/icons-material/RecentActors';
@@ -53,15 +52,15 @@ const Admin = () => {
     const RenderComponent = ({ index }) => {
         switch (index) {
             case 0: return <Dashboard />
-                break;
+
             case 1: return <Members />
-                break;
+
             case 2: return <AddMember />
-                break;
+
             case 3: return <Trainers />
-                break;
+
             case 4: return <AddTrainers />
-                break;
+
             default:
                 break;
         }

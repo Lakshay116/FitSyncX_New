@@ -1,10 +1,7 @@
 // import PropTypes from 'prop-types'
 import '../css/Navbar.css';
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
 import "animate.css/animate.compat.css"
-import ScrollAnimation from 'react-animate-on-scroll';
-import BodyB from "../images/body_b.png"
 import ABT from "../images/abt.png"
 
 
@@ -25,7 +22,7 @@ export class About extends Component {
                 </div>
 
                 <div className='abt_img'>
-                    <img src={ABT} className='bb_img' />
+                    <img alt='' src={ABT} className='bb_img' />
                 </div>
             </div >
         )

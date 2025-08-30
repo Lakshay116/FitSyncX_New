@@ -17,7 +17,7 @@ const Admin_Login = () => {
     const passwordChangeHandler = (e) => setPassword(e.target.value);
 
     const login = async () => {
-        await fetch("http://localhost:5001/api/admin/login", {
+        await fetch(`${process.env.REACT_APP_BE_URL}/api/admin/login`, {
             method: "POST",
             body: JSON.stringify({
                 email: mail,

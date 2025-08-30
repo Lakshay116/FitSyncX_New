@@ -15,7 +15,7 @@ function Sidebar(props) {
             </div>
             <ul className='sideList'>
                 {props.sidebardata.map((val, key) => {
-                    return <button className={props.isSelected == val.index ? "selected-button" : "button"}
+                    return <button className={props.isSelected === val.index ? "selected-button" : "button"}
                         style={{ width: '100%', border: 'none' }}
                         onClick={() => props.setIsSelected(val.index)} >
                         <li key={key} className='row' >

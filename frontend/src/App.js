@@ -4,11 +4,9 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
 import Pricing from './components/Pricing';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import VDO from "./images/login.mp4"

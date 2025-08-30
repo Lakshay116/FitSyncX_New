@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from './Navbar'
 import Footer from './Footer'
 
+
 // 👁 import icons (you can use react-icons or plain emoji)
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -18,7 +19,7 @@ function Login() {
     const passwordChangeHandler = (e) => setPassword(e.target.value);
 
     const login = async () => {
-        await fetch("http://localhost:5001/api/login", {
+        await fetch(`${process.env.REACT_APP_BE_URL}/api/login`, {
             method: "POST",
             body: JSON.stringify({
                 email: mail,

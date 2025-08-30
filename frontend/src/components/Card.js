@@ -1,7 +1,6 @@
 // import PropTypes from 'prop-types'
 import '../css/Card.css';
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
 import "animate.css/animate.compat.css"
 
 
@@ -17,7 +16,7 @@ export class Card extends Component {
 
                     <div class="thefront">
                         <h4 style={{ paddingTop: '2vw' }}>{title}</h4>
-                        <img src={image} style={{ width: '40%', height: '32%' }} />
+                        <img alt='' src={image} style={{ width: '40%', height: '32%' }} />
                         <p style={{ textAlign: 'justify', fontSize: '.9rem' }}>{description}</p>
 
                     </div>

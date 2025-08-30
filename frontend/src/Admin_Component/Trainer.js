@@ -13,7 +13,7 @@ const Trainer = () => {
 
     const fetchTrainers = async () => {
         try {
-            const res = await fetch('http://localhost:5001/api/trainers');
+            const res = await fetch(`${process.env.REACT_APP_BE_URL}/api/trainers`);
             const data = await res.json();
             setTrainers(data);
         } catch (err) {
@@ -26,7 +26,7 @@ const Trainer = () => {
         if (!confirm) return;
 
         try {
-            const res = await fetch(`http://localhost:5001/api/trainers/${id}`, {
+            const res = await fetch(`${process.env.REACT_APP_BE_URL}/api/trainers/${id}`, {
                 method: 'DELETE',
             });
 

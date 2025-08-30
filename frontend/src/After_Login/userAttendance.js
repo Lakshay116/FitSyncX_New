@@ -15,7 +15,7 @@ const UserAttendance = ({ userId }) => {
     const fetchAttendance = async () => {
         try {
             setLoading(true);
-            const res = await axios.get(`http://localhost:5001/api/attendance/${userId}`);
+            const res = await axios.get(`https://fit-sync-x-new.vercel.app/api/attendance/${userId}`);
             setAttendance(res.data);
 
             // Calculate stats
@@ -36,7 +36,7 @@ const UserAttendance = ({ userId }) => {
     const markPresentToday = async () => {
         const today = new Date().toISOString().split('T')[0];
         try {
-            await axios.post('http://localhost:5001/api/attendance/mark', {
+            await axios.post(`${process.env.REACT_APP_BE_URL}/api/attendance/mark`, {
                 user_id: userId,
                 date: today,
                 status: 'Present'
@@ -75,11 +75,11 @@ const UserAttendance = ({ userId }) => {
         return null;
     };
 
-    const tomorrow = () => {
-        let d = new Date();
-        d.setDate(d.getDate() + 1);
-        return d;
-    };
+    // const tomorrow = () => {
+    //     let d = new Date();
+    //     d.setDate(d.getDate() + 1);
+    //     return d;
+    // };
 
     const isTodayMarked = attendance.find(
         (a) => selectedDate.toLocaleDateString() === new Date().toLocaleDateString() && a.status === 'Present'

@@ -1,15 +1,14 @@
 
 import '../css/Login.css';
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import "animate.css/animate.compat.css"
-import { useNavigate } from "react-router-dom";
 import Navbar from './Navbar'
 import Footer from './Footer'
 
 
 function About() {
 
-    const navigate = useNavigate();
+
 
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
@@ -32,7 +31,7 @@ function About() {
 
 
     const signup = async () => {
-        const result = await fetch(`http://localhost:5001/api/register`, {
+        await fetch(`${process.env.REACT_APP_BE_URL}/api/register`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

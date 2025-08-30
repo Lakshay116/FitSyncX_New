@@ -15,7 +15,7 @@ function Members() {
 
     const fetchUsers = async () => {
         try {
-            const res = await fetch('http://localhost:5001/api/users');
+            const res = await fetch(`${process.env.REACT_APP_BE_URL}/api/users`);
             const data = await res.json();
             setUsers(data);
         } catch (err) {
@@ -29,7 +29,7 @@ function Members() {
         if (!confirmDelete) return;
 
         try {
-            const res = await fetch(`http://localhost:5001/api/users/${id}`, {
+            const res = await fetch(`${process.env.REACT_APP_BE_URL}/api/users/${id}`, {
                 method: 'DELETE',
             });
 
