@@ -5,6 +5,8 @@ const db = require('../config/db');
 const jwt = require('jsonwebtoken');
 const randomstring = require('randomstring');
 const sendMail = require('../helper/sendMaill');
+const nodemailer = require('nodemailer');
+
 
 
 const contactSubmit = async (req, res) => {
@@ -108,7 +110,7 @@ const register = (req, res) => {
                                 let mailSubject = 'Mail Verification';
                                 const randomToken = randomstring.generate();
                                 let content = '<p>Hey!' + req.body.name + '\
-                                Please <a href="http://localhost:5001/mail-verification?token='+ randomToken + '"> Verify</a> your Mail.'
+                                Please <a href="https://fitsyncx-new.onrender.com/mail-verification?token='+ randomToken + '"> Verify</a> your Mail.'
                                 sendMail(req.body.email, mailSubject, content);
                                 db.query('UPDATE users set token=? where email=?', [randomToken, req.body.email], function (error, result) {
                                     if (error) {
@@ -370,6 +372,7 @@ module.exports = {
     markAttendance,
     contactSubmit
 }
+
 
 
 
