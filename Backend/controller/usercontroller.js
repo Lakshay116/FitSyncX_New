@@ -161,7 +161,7 @@ const register = async (req, res) => {
 
 const verifyMail = async (req, res) => {
     var token = req.query.token;
-    await db.query('SELECT * FROM users WHERE TOKEN=? LIMIT 1', token, function (error, result, fields) {
+    db.query('SELECT * FROM users WHERE TOKEN=? LIMIT 1', token, function (error, result, fields) {
         if (error) {
             console.log(error.message);
         }
@@ -402,6 +402,7 @@ module.exports = {
     markAttendance,
     contactSubmit
 }
+
 
 
 
