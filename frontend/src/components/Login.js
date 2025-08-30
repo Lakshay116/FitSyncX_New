@@ -39,6 +39,7 @@ function Login() {
                         navigate('/user')
                     }
                     else {
+                        window.alert("user not verified Please verify your mail")
                         console.log("user Not Verified")
                     }
                 }
@@ -103,4 +104,5 @@ function Login() {
 }
 
 export default Login;
+
 
