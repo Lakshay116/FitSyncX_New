@@ -15,7 +15,7 @@ const UserAttendance = ({ userId }) => {
     const fetchAttendance = async () => {
         try {
             setLoading(true);
-            const res = await axios.get(`https://fit-sync-x-new.vercel.app/api/attendance/${userId}`);
+            const res = await axios.get(`https://fitsyncx-new.onrender.com/api/attendance/${userId}`);
             setAttendance(res.data);
 
             // Calculate stats
@@ -140,3 +140,4 @@ const UserAttendance = ({ userId }) => {
 };
 
 export default UserAttendance;
+
