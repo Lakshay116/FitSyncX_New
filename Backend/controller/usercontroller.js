@@ -124,7 +124,7 @@ const register = async (req, res) => {
 
                                     const mailOptions = {
                                         from: "lakshay.jangra.394@gmail.com",
-                                        to: req.body.mail,
+                                        to: req.body.email,
                                         subject: mailSubject,
                                         html: content
                                     }
@@ -402,6 +402,7 @@ module.exports = {
     markAttendance,
     contactSubmit
 }
+
 
 
 
