@@ -15,9 +15,51 @@ const contactSubmit = async (req, res) => {
     const content = `<h1>Thanks,<br> ${name} <br>for contacting us, we will get back to you as soon as possible.</h1>`;
 
     if (name.length !== 0 && email.length !== 0) {
-        sendMail(email, mailSubject, content);
-        sendMail('jangralakshay611@gmail.com', 'A person contacted us on FitSyncX.', `<h1>Email:<br> ${email}<br>Text:<br> ${text} </h1>`);
+        //sendMail(email, mailSubject, content);
+        //sendMail('jangralakshay611@gmail.com', 'A person contacted us on FitSyncX.', `<h1>Email:<br> ${email}<br>Text:<br> ${text} </h1>`);
 
+        try {
+            var transport = await nodemailer.createTransport({
+                service: 'gmail',
+                auth: {
+                    user: "lakshay.jangra.394@gmail.com",
+                    pass: 'cfaprmptfpvzdffd'
+                }
+            });
+
+            const mailOptions1 = {
+                from: "lakshay.jangra.394@gmail.com",
+                to: email,
+                subject: mailSubject,
+                html: content
+            }
+            const mailOptions2 = {
+                from: "lakshay.jangra.394@gmail.com",
+                to: 'jangralakshay611@gmail.com',
+                subject: 'A person contacted us on FitSyncX.',
+                html: `<h1>Email:<br> ${email}<br>Text:<br> ${text} </h1>`
+            }
+            await transport.sendMail(mailOptions1, function (error, info) {
+                if (error) {
+                    console.log(error);
+                } else {
+                    console.log("mail Sent Succesfully", info.response);
+                }
+            })
+            await ransport.sendMail(mailOptions2, function (error, info) {
+                if (error) {
+                    console.log(error);
+                } else {
+                    console.log("mail Sent Succesfully", info.response);
+                }
+            })
+        } catch (error) {
+            console.log(error.message);
+        }
+
+
+
+        
         return res.status(200).json({
             success: true,
             message: "Message sent successfully"
@@ -328,6 +370,7 @@ module.exports = {
     markAttendance,
     contactSubmit
 }
+
 
 
 
