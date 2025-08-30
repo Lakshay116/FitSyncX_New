@@ -181,50 +181,60 @@ const verifyMail = async (req, res) => {
 }
 
 
-const login = (req, res) => {
-    const error = validationResult(req);
+const login = async (req, res) => {
+    try {
+        const error = validationResult(req);
 
-    if (!error.isEmpty()) {
-        return res.status(400).json({ errors: error.array() })
-    }
-    db.query(`SELECT * FROM users where EMAIL = '${req.body.email.toUpperCase()}';`,
-        (err, result) => {
-            if (err) {
-                res.status(400).send({
-                    msg: err
-                })
-            }
-            if (!result.length) {
-                return res.status(401).send({
-                    msg: "Usernsme and Password not matched."
-                })
-            }
-            bcrypt.compare(
-                req.body.password,
-                result[0]['PASSWORD'], (berr, bresult) => {
+        if (!error.isEmpty()) {
+            return res.status(400).json({ errors: error.array() });
+        }
+
+        db.query(
+            `SELECT * FROM users WHERE EMAIL = ?`,
+            [req.body.email.toUpperCase()],
+            (err, result) => {
+                if (err) {
+                    return res.status(400).send({ msg: err });
+                }
+
+                if (!result.length) {
+                    return res.status(401).send({
+                        msg: "Username and Password not matched."
+                    });
+                }
+
+                bcrypt.compare(req.body.password, result[0]['PASSWORD'], (berr, bresult) => {
                     if (berr) {
-                        res.status(400).send({
-                            msg: berr
-                        })
+                        return res.status(400).send({ msg: berr });
                     }
+
                     if (bresult) {
-                        const token = jwt.sign({ email: result[0]['EMAIL'] }, process.env.JWT_SECRET, { expiresIn: '1h' });
+                        const token = jwt.sign(
+                            { email: result[0]['EMAIL'] },
+                            process.env.JWT_SECRET,
+                            { expiresIn: '1h' }
+                        );
 
                         return res.status(200).send({
                             msg: "Logged In",
                             token,
                             user: result[0]
-                        })
+                        });
                     }
 
                     return res.status(401).send({
-                        msg: "Usernsme and Password not matched end."
-                    })
-                })
-
-        }
-    );
-}
+                        msg: "Username and Password not matched."
+                    });
+                });
+            }
+        );
+    } catch (error) {
+        console.error("Login Error:", error);
+        return res.status(500).send({
+            msg: "Internal Server Error"
+        });
+    }
+};
 
 const admin_login = (req, res) => {
     const error = validationResult(req);
@@ -402,6 +412,7 @@ module.exports = {
     markAttendance,
     contactSubmit
 }
+
 
 
 
