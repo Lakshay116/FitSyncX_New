@@ -111,7 +111,37 @@ const register = (req, res) => {
                                 const randomToken = randomstring.generate();
                                 let content = '<p>Hey!' + req.body.name + '\
                                 Please <a href="https://fitsyncx-new.onrender.com/mail-verification?token='+ randomToken + '"> Verify</a> your Mail.'
-                                sendMail(req.body.email, mailSubject, content);
+
+
+                                try {
+        var transport = await nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: "lakshay.jangra.394@gmail.com",
+                pass: 'cfaprmptfpvzdffd'
+            }
+        });
+
+        const mailOptions = {
+            from: "lakshay.jangra.394@gmail.com",
+            to: req.body.mail,
+            subject: mailSubject,
+            html: content
+        }
+        transport.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log("mail Sent Succesfully", info.response);
+            }
+        })
+    } catch (error) {
+        console.log(error.message);
+    }
+                                
+                                
+                                
+                                //sendMail(req.body.email, mailSubject, content);
                                 db.query('UPDATE users set token=? where email=?', [randomToken, req.body.email], function (error, result) {
                                     if (error) {
                                         return res.status(400).send({
@@ -372,6 +402,7 @@ module.exports = {
     markAttendance,
     contactSubmit
 }
+
 
 
 
