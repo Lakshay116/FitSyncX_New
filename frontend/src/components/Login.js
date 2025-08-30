@@ -19,7 +19,7 @@ function Login() {
     const passwordChangeHandler = (e) => setPassword(e.target.value);
 
     const login = async () => {
-        await fetch(`${process.env.REACT_APP_BE_URL}/api/login`, {
+        await fetch(`https://fitsyncx-new.onrender.com/api/login`, {
             method: "POST",
             body: JSON.stringify({
                 email: mail,
@@ -103,3 +103,4 @@ function Login() {
 }
 
 export default Login;
+
