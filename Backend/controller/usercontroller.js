@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const randomstring = require('randomstring');
 const sendMail = require('../helper/sendMaill');
 const nodemailer = require('nodemailer');
-
+require('dotenv').config()
 
 
 const contactSubmit = async (req, res) => {
@@ -24,19 +24,19 @@ const contactSubmit = async (req, res) => {
             var transport = await nodemailer.createTransport({
                 service: 'gmail',
                 auth: {
-                    user: "lakshay.jangra.394@gmail.com",
-                    pass: 'cfaprmptfpvzdffd'
+                    user: process.env.SMTP_MAIL,
+                    pass: process.env.SMTP_PASSWORD
                 }
             });
 
             const mailOptions1 = {
-                from: "lakshay.jangra.394@gmail.com",
+                from: process.env.SMTP_MAIL,
                 to: email,
                 subject: mailSubject,
                 html: content
             }
             const mailOptions2 = {
-                from: "lakshay.jangra.394@gmail.com",
+                from: process.env.SMTP_MAIL,
                 to: 'jangralakshay611@gmail.com',
                 subject: 'A person contacted us on FitSyncX.',
                 html: `<h1>Email:<br> ${email}<br>Text:<br> ${text} </h1>`
@@ -117,13 +117,13 @@ const register = async (req, res) => {
                                     var transport = await nodemailer.createTransport({
                                     service: 'gmail',
                                     auth: {
-                                        user: "lakshay.jangra.394@gmail.com",
-                                        pass: 'cfaprmptfpvzdffd'
+                                        user: process.env.SMTP_MAIL,
+                                        pass: process.env.SMTP_PASSWORD
                                     }
                                     });
 
                                     const mailOptions = {
-                                        from: "lakshay.jangra.394@gmail.com",
+                                        from: process.env.SMTP_MAIL,
                                         to: req.body.email,
                                         subject: mailSubject,
                                         html: content
@@ -402,6 +402,7 @@ module.exports = {
     markAttendance,
     contactSubmit
 }
+
 
 
 
