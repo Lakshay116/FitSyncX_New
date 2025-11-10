@@ -46,12 +46,17 @@ export class Features extends Component {
                             <p style={{ paddingTop: '3vh', color: 'white' }}>Feature packed software designed for all type of gym and fitness studios. Easy to manage all gym activities like enquiry, attendance, follow-ups, expenses, reports etc. at one place.</p>
                         </div>
                         <div className='easy_img'>
-                            <img src={EASY} alt="" style={{ width: '30vw', borderRadius: '50px' }} />
+                            <img src={EASY} alt="" style={{ width: '30vw', borderRadius: '40px', marginTop: '12px' }} />
                         </div>
                     </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <div className='feature_last' style={{ marginTop: '13vw' }}>
                         <div className='easy_img' style={{ marginLeft: '0' }}>
-                            <img src={Dashbord} alt="" style={{ width: '23vw', borderRadius: '50px' }} />
+                            <img src={Dashbord} alt="" style={{ width: '23vw', borderRadius: '40px', marginTop: '12px' }} />
                         </div>
                         <div className='easy' style={{ marginLeft: '15vh' }}>
                             <h2 style={{ color: 'orangered', paddingTop: '1vh', textDecoration: 'none' }}>ANALYSIS AND REPORT</h2>
