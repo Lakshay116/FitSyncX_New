@@ -8,9 +8,15 @@
     color: white;
     padding: 20vh 0 0 30vh;
     font-size: 2rem;
+    background-color: black;
+}
+
+.par {
+    padding-right: 20vw;
 }
 
 .head_prc {
+    background-color: black;
     display: flex;
     width: 100vw;
     height: 20vh;
@@ -33,7 +39,7 @@
     display: flex;
     width: 100vw;
     height: 60vh;
-    /* background-color: antiquewhite; */
+    background-color: black
 }
 
 .in_content_prc {
@@ -48,7 +54,7 @@
 .prc {
     margin-top: 25%;
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     color: rgb(88, 87, 87);
 }
 
@@ -87,4 +93,93 @@
 .book_btn:hover {
     background-color: orangered;
     color: white;
+}
+
+.free_img {
+    height: 60%;
+    margin-left: 8vh;
+    margin-top: 6%;
+}
+
+.th-six-img {
+    height: 60%;
+    margin-left: 5vh;
+    margin-top: 6%;
+}
+
+.tw-img {
+    height: 75%;
+    margin-left: 4vh;
+    margin-top: 4%;
+}
+
+
+
+@media (max-width: 768px) {
+    .par {
+        padding-right: 0;
+    }
+
+    .free_img {
+        height: 50%;
+        margin-top: 15%;
+        margin-left: 0;
+    }
+
+    .tw-img {
+        height: 75vh;
+        margin-left: 0;
+        margin-top: 4%;
+    }
+
+    .th-six-img {
+        height: 50%;
+        margin-left: 0;
+        margin-top: 6%;
+    }
+
+    .in_head_prc h1 {
+        font-size: 1rem;
+    }
+
+    .in_head_prc img {
+        height: 50%;
+    }
+
+    .h1_price {
+        color: white;
+        padding: 0;
+        padding-top: 10%;
+        font-size: 1.2rem;
+        width: 100vw;
+    }
+
+
+    .in_head_prc {
+        display: block;
+        /* text-align: left; */
+        border-radius: 5px;
+        border: 1px solid rgb(250, 249, 249);
+        margin-top: 4vh;
+        width: 20%;
+        margin-left: 4vw;
+        height: 15vh;
+        align-items: center;
+        justify-content: center;
+        /* background-color: aqua; */
+    }
+
+    .in_content_prc {
+        border-radius: 5px;
+        border: 1px solid rgb(243, 242, 242);
+        width: 20vw;
+        margin-left: 4vw;
+        height: 50%;
+        /* background-color: aqua; */
+    }
+
+    .free_btn {
+        margin-top: 12%;
+        height: 28%;
+    }
 }

@@ -80,3 +80,15 @@
     background: transparent;
     color: orangered;
 }
+
+
+@media (max-width: 768px) {
+    .sidebar_main {
+        width: 200px;
+        height: 138vh;
+        background-color: rgb(2, 2, 2);
+        position: relative;
+        margin: 5px;
+        border-radius: 10px;
+    }
+}

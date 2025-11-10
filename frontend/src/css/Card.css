@@ -1,6 +1,6 @@
 .maincontainer {
     position: absolute;
-    width: 22vw;
+    width: 22%;
     height: 60vh;
     background: none;
 
@@ -90,8 +90,16 @@
 .thefront p,
 .theback p {
     font-family: 'zilla slab', sans-serif;
-    padding: 30px;
+    /* padding-top: 10px; */
+    padding: 10px;
     font-weight: normal;
     font-size: 12px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .maincontainer {
+        width: 46%;
+        height: 45%;
+    }
 }

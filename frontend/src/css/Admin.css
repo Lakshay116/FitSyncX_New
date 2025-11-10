@@ -9,3 +9,18 @@
     position: absolute;
 
 }
+
+@media (max-width: 768px) {
+    .admin_main {
+        width: 180vw;
+        margin: 5px;
+        margin-left: 213px;
+        margin-top: 60px;
+        border-radius: 10px;
+        height: 130.5vh;
+        border: 2px solid #000000;
+        position: absolute;
+
+    }
+
+}

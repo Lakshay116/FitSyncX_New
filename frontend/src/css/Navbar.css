@@ -2,14 +2,9 @@
     margin-top: 0;
 }
 
-
 .navbar {
     width: 100vw;
     position: fixed;
-    /* position: relative; */
-    /* border: 1px solid; */
-    /* background-color:rgba(0,0,0,0.2); */
-    /* background-color: #ece1e1; */
     background-color: rgb(13, 29, 29);
     background: transparent;
     backdrop-filter: blur(10px);
@@ -21,7 +16,6 @@
     text-decoration: none;
     justify-content: space-between;
     list-style: none;
-    /* background-color: aqua; */
     float: left;
 }
 
@@ -75,7 +69,6 @@
 
 .logsign_div {
     text-align: right;
-    /* background-color: #4e1717; */
     width: 20%;
     float: right;
 }
@@ -123,8 +116,6 @@
     transform: scaleX(1);
 }
 
-
-
 .ls_link:hover {
     margin-top: 3px;
     padding-left: 10px;
@@ -138,4 +129,112 @@
     font-weight: bold;
     text-decoration: none;
     transform: scaleX(1);
+}
+
+
+
+
+
+
+
+/* ================== NAVBAR HAMBURGER RESPONSIVE ================== */
+
+/* Toggle (hamburger) button */
+.nav_toggle {
+    display: none;
+    font-size: 28px;
+    color: orangered;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 18px;
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+/* When active, rotate to X */
+.nav_toggle.active {
+    transform: rotate(90deg);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        /* padding: 10px; */
+        position: relative;
+    }
+
+    .logo {
+        margin: 15px 0 10px 10px;
+        float: none;
+    }
+
+    /* Hide nav & login/signup initially */
+    .nav_ul,
+    .logsign_div {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background: rgba(13, 29, 29, 0.95);
+        padding: 15px 0;
+        border-radius: 10px;
+        margin-top: 8px;
+    }
+
+    /* Show when open */
+    .nav_ul.open,
+    .logsign_div.open {
+        display: flex;
+    }
+
+    .nav_li {
+        margin: 12px 0;
+        display: block;
+    }
+
+    .nav_link {
+        font-size: 18px;
+        padding: 8px 0;
+    }
+
+    .logsign_div {
+        text-align: center;
+    }
+
+    .ls_link,
+    .login {
+        width: 80%;
+        max-width: 220px;
+        margin: 6px 0;
+        text-align: center;
+    }
+
+    /* Show hamburger only on mobile */
+    .nav_toggle {
+        display: block;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+    .nav_link {
+        font-size: 16px;
+    }
+
+    .ls_link,
+    .login {
+        font-size: 16px;
+        padding: 6px 8px;
+    }
+
+    .logo {
+        height: 40px;
+    }
 }
