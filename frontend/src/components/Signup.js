@@ -60,15 +60,15 @@ function About() {
                 <div className='login_div'>
                     <h1 style={{ color: 'orangered' }}>Sign Up</h1>
                     <div className='login_form'>
-                        <input autoComplete='off' value={name} name="name" type="text" className="sign_input" placeholder="Name" onChange={nameChangeHandler} />
+                        <input name="name" type="text" className="sign_input" placeholder="Name" onChange={nameChangeHandler} />
                         <div style={{ width: '70%', height: '2px', backgroundColor: 'orangered', marginLeft: '15%' }}></div>
-                        <input autoComplete='off' value={mail} name="email" type="text" className="sign_input" placeholder="Email" onChange={emailChangeHandler} />
+                        <input name="email" type="text" className="sign_input" placeholder="Email" onChange={emailChangeHandler} />
                         <div style={{ width: '70%', height: '2px', backgroundColor: 'orangered', marginLeft: '15%' }}></div>
-                        <input autoComplete='off' value={phone} name="phone" type="text" className="sign_input" placeholder="Phone" onChange={phoneChangeHandler} />
+                        <input name="phone" type="text" className="sign_input" placeholder="Phone" onChange={phoneChangeHandler} />
                         <div style={{ width: '70%', height: '2px', backgroundColor: 'orangered', marginLeft: '15%' }}></div>
-                        <input autoComplete='off' value={password} name="password" type="text" className="sign_input" placeholder="Password" onChange={passwordChangeHandler} />
+                        <input name="password" type="text" className="sign_input" placeholder="Password" onChange={passwordChangeHandler} />
                         <div style={{ width: '70%', height: '2px', backgroundColor: 'orangered', marginLeft: '15%' }}></div>
-                        <button class="submit-contact" style={{ marginTop: '6vh' }} onClick={signup}>Register</button>
+                        <button class="submit-contact" style={{ marginTop: '6vh', marginLeft: '0' }} onClick={signup}>Register</button>
                         {/* <input class="submit-contact" type="submit" value="LogIn" style={{ marginTop: '6vh' }} /> */}
                     </div>
                 </div>
@@ -81,3 +81,4 @@ function About() {
 
 
 export default About   
+
