@@ -44,7 +44,7 @@ function Contact() {
     return (
         <div>
             <Navbar />
-            <video style={{ width: '100vw' }} className='videoTag' autoPlay loop muted>
+            <video style={{ height: '150%' }} className='videoTag' autoPlay loop muted>
                 <source src={VDO} type='video/mp4' />
             </video>
 
@@ -87,3 +87,4 @@ function Contact() {
 }
 
 export default Contact;
+
