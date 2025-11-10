@@ -94,7 +94,7 @@ function Login() {
 
                         <div style={{ width: '70%', height: '2px', backgroundColor: 'orangered', marginLeft: '15%' }}></div>
 
-                        <button className="submit-contact" style={{ marginTop: '10vh' }} onClick={login}>Login</button>
+                        <button className="submit-contact" style={{ marginLeft: '0', marginTop: '10vh', width: '50%' }} onClick={login}>Login</button>
                     </div>
                 </div>
             </div>
@@ -104,5 +104,6 @@ function Login() {
 }
 
 export default Login;
+
 
 
