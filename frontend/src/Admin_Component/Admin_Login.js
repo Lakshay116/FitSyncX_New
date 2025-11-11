@@ -98,7 +98,7 @@ const Admin_Login = () => {
 
                             <div style={{ width: '70%', height: '2px', backgroundColor: 'orangered', marginLeft: '15%' }}></div>
 
-                            <button className="submit-contact" style={{ marginTop: '10vh' }} onClick={login}>
+                            <button className="submit-contact" style={{ marginLeft: '0', marginTop: '10vh', width: '50%' }} onClick={login}>
                                 Login
                             </button>
                         </div>
@@ -110,3 +110,4 @@ const Admin_Login = () => {
 };
 
 export default Admin_Login;
+
