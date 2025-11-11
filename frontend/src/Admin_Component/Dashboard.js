@@ -61,7 +61,7 @@ function Dashboard() {
                         series={[
                             {
                                 innerRadius: 30,
-                                paddingAngle: 2,
+                                paddingAngle: 4,
                                 data: [
                                     { id: 0, value: 300, label: 'Members', color: 'moon' },
                                     { id: 2, value: 100, label: 'Fees Pending' },
@@ -69,8 +69,8 @@ function Dashboard() {
                                 ],
                             },
                         ]}
-                        width={400}
-                        height={180}
+                        width={290}
+                        height={150}
                     />
                     <h3 style={{ textAlign: 'center' }}>Fees Chart</h3>
                 </div>
@@ -84,7 +84,7 @@ function Dashboard() {
 
                             },
                         ]}
-                        width={470}
+                        width={300}
                         height={300}
                     />
                 </div>
@@ -92,6 +92,7 @@ function Dashboard() {
         </LoadingScreen>
     )
 }
+
 
 
 
