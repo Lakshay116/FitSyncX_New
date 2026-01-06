@@ -1,5 +1,6 @@
 
 var mysql = require('mysql2');
+var fs     = require('fs');
 require('dotenv').config()
 
 
@@ -8,11 +9,15 @@ var conn = mysql.createConnection({
     user: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
+    ssl:{
+    ca   : fs.readFileSync('../ca.pem'),
+    }
 })
 
 conn.connect(function (err) {
     if (err) throw err;
     console.log('fitsyncx connected')
 })
+
 
 module.exports = conn;
