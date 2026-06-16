@@ -45,7 +45,7 @@ FitSyncX is a full-stack Gym Management System designed to streamline gym operat
 
 ### Database
 
-- PostgreSQL
+- MySQL
 
 ### Deployment
 
@@ -160,7 +160,7 @@ npm start
 - Full Stack Development
 - React.js Development
 - REST API Design
-- PostgreSQL Database Management
+- MySQL Database Management
 - Authentication & Authorization
 - MVC Architecture
 - Role-Based Access Control (RBAC)
